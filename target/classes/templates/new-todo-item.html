@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Add ToDo Task</title>
+
+    <link rel="stylesheet"
+    	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <script
+    	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script
+    	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="col-6"></div>
+
+        <h1 class="p-3"> Add a ToDo Task </h1>
+      
+        <form action="#" th:action="@{/todo}" th:object="${todoItem}" method="POST">
+        
+            <div class="form-group">
+
+                <div class="row">
+                    <div class="form-group col-md-12">
+                        <label class="col-md-3" for="title">Title</label>
+                        <div class="col-md-6">
+                            <input type="text" id="title" name="title" class="form-control input-sm" required="required" />
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="form-group col-md-12">
+                        <label class="col-md-3" for="date">Date</label>
+                        <div class="col-md-6">
+                            <input type="date" id="date" name="date" class="form-control input-sm" required="required" />
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="row">
+                    <div class="form-group col-md-12">
+                        <label class="col-md-3" for="status">Status</label>
+                        <div class="col-md-6">
+                            <input type="text" id="status" name="status" class="form-control input-sm" value="Incomplete" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row p-2">
+                    <div class="col-md-2">
+                        <button type="submit" value="Register" class="btn btn-success">Save</button>
+                    </div>
+                </div>
+
+            </div>
+        </form>
+        </div>
+    </div>
+
+</body>
+</html>
